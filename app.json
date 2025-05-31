@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "VibeGuard",
+    "slug": "vibeguard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a1a"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vibeguard.security",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio",
+          "fetch",
+          "location",
+          "remote-notification"
+        ],
+        "NSLocationWhenInUseUsageDescription": "VibeGuard uses your location only during emergency responses to ensure patron safety.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "VibeGuard requires background location access to respond to emergencies even when the app is not active.",
+        "NSMicrophoneUsageDescription": "Required for emergency alert sounds in high-noise environments.",
+        "UIRequiresPersistentWiFi": true
+      }
+    },
+    "android": {
+      "package": "com.vibeguard.security",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a1a"
+      },
+      "permissions": [
+        "VIBRATE",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "WAKE_LOCK",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow VibeGuard to use your location to respond to emergencies.",
+          "locationAlwaysPermission": "Allow VibeGuard to use your location in the background for emergency response.",
+          "locationWhenInUsePermission": "Allow VibeGuard to use your location during emergencies."
+        }
+      ]
+    ]
+  }
+} 

@@ -1,0 +1,21 @@
+{
+  "name": "secure-app-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "update:node": "node scripts/update-node.js",
+    "update:packages": "node scripts/update-packages.js",
+    "update:all": "npm run update:node && npm run update:packages",
+    "postinstall": "npm run update:all"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "semver": "^7.5.4"
+  }
+}
